@@ -1,0 +1,104 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+html{
+    box-sizing: border-box;
+}
+.nav-container{
+    position: fixed;
+    width: 100%;
+    height: 10vh;
+    background-color: black;
+    color: white;
+    box-sizing: border-box;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+   
+}
+.container{
+    height: 10vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: auto;
+}
+.container .menu-con ul{
+    display: flex;
+    gap: 0.6rem;
+    list-style: none;
+}
+.container .menu-con ul li a{
+    color: white;
+    text-decoration: none;
+}
+.container .menu-con ul li a:hover{
+    color: blue;
+}
+input{
+    width: 17rem;
+    height: 2rem;
+    border-radius: 10px;
+}
+.div-1{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: blanchedalmond;
+}
+
+.div-2{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: yellow;
+}
+button{
+    padding: 0.3rem;
+    display: none;
+}
+@media (max-width: 70rem){
+    input{
+        display: none;
+    }
+}
+@media (max-width: 40rem){
+    .container .menu-con ul{
+        position: fixed;
+       
+        flex-direction: column;
+        inset: 0 0 0 30%;
+        background: rgba(0, 0, 0, 0.4);
+       padding-top: 5rem;
+       padding-left: 0.6rem;
+       gap: 1.3rem;
+       font-size: 1.5rem;
+       transform: translateX(100%);
+       transition: transform ease 350ms;
+    }
+    .container .menu-con ul[data-visibility="true"]{
+        transform: translateX(0%);
+    }
+
+
+    button{
+       display: block;
+        position: absolute;
+        margin-top: -1rem;
+        margin-left: 8rem;
+        z-index: 9999;
+        transition: transform ease-in 0.5s;
+    }
+
+    button:hover{
+        transform: scale(0.9);
+        background-color: green;
+        color: white;
+    }
+}
+
+
